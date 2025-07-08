@@ -1,4 +1,6 @@
-# 📄 README – Power BI Project: *Sales Dashboard – GreenMarket*
+# 📄 Power BI Project: *Sales Dashboard – GreenMarket*
+
+lien vers le dashboard : https://app.powerbi.com/reportEmbed?reportId=9e15115f-84b8-443c-8ce5-3b31164e654b&autoAuth=true&ctid=a9f1c4f7-38f4-4d38-8a3c-4b6dbe981cea
 
 ## 🧾 Description
 
