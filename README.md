@@ -44,6 +44,7 @@ En résumé, dès qu’un fichier de ventes est ajouté dans OneDrive, le rappor
   1. Actualisation du dataset Power BI sur le Service.
   2. Envoi d’un email automatique aux équipes avec :
      - Un **lien direct** vers le rapport Power BI actualisé.
+    
 Flux sur power automate :
 
 ![flux](/images/flux-automate.png)
