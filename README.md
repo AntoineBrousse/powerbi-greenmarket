@@ -1,21 +1,31 @@
 # Étude de cas – Automatisation de l’actualisation d’un rapport Power BI à partir de fichiers Excel OneDrive
 
 ## 📌 Contexte
-Une PME fictive du secteur **Green Market** gère ses ventes mensuelles dans des fichiers Excel stockés sur OneDrive.  
-Chaque mois, un nouveau fichier est ajouté, nécessitant :
-- Une **importation manuelle** dans Power BI.
-- Un **rafraîchissement manuel** du rapport.
-- L’envoi des mises à jour aux équipes commerciales.
+Green Market est une PME fictive spécialisée dans la vente de produits alimentaires et d’articles éco-responsables.
+L’entreprise enregistre ses ventes mensuelles dans des fichiers Excel stockés sur OneDrive.
+
+![cloud](/images/cloud.png)
+
+Avant ce projet, chaque fois qu’un nouveau fichier était ajouté, les équipes devaient :
+- Importer manuellement le fichier dans Power BI.
+- Nettoyer les données : suppression des colonnes inutiles, correction des formats (dates, montants…), renommage des champs.
+- Resélectionner les colonnes pertinentes et reparamétrer les transformations nécessaires.
+- Rafraîchir manuellement le rapport.
+- Envoyer la version mise à jour aux équipes commerciales.
 
 Ce processus était **chronophage**, répétitif et sujet à des oublis.
 
 ---
 
 ## 🎯 Objectif
-Mettre en place une **solution automatisée** permettant :
-- L’**import automatique** des nouveaux fichiers Excel depuis OneDrive dans Power BI.
-- L’**actualisation du rapport** sans intervention humaine.
-- L’**envoi d’une notification par email** avec un lien vers le rapport à jour.
+Mettre en place une solution qui permette à Green Market de disposer en permanence d’un rapport Power BI à jour et prêt à l’analyse, sans aucune intervention humaine, en automatisant :
+- L’importation des nouveaux fichiers Excel stockés sur OneDrive.
+- Le nettoyage et la transformation des données (sélection des colonnes pertinentes, mise au bon format, suppression des champs inutiles) directement dans Power Query.
+- L’intégration automatique des nouvelles données dans le modèle Power BI.
+- Le rafraîchissement du rapport sur Power BI Service.
+- L’envoi automatique d’une notification par email avec le lien vers le rapport actualisé.
+
+En résumé, dès qu’un fichier de ventes est ajouté dans OneDrive, le rapport Power BI est immédiatement prêt à être consulté, sans aucune manipulation manuelle.
 
 ---
 
@@ -34,9 +44,8 @@ Mettre en place une **solution automatisée** permettant :
   1. Actualisation du dataset Power BI sur le Service.
   2. Envoi d’un email automatique aux équipes avec :
      - Un **lien direct** vers le rapport Power BI actualisé.
-     - *(Option Premium)* le rapport exporté en PDF ou PowerPoint en pièce jointe.
-
-![Performance commerciale](/images/cloud.png)
+Flux sur power automate : 
+![flux](/images/flux-automate.png.png)
 
 ---
 
