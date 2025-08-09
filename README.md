@@ -36,6 +36,8 @@ Mettre en place une **solution automatisée** permettant :
      - Un **lien direct** vers le rapport Power BI actualisé.
      - *(Option Premium)* le rapport exporté en PDF ou PowerPoint en pièce jointe.
 
+![Performance commerciale](/images/Page-1.png)
+
 ---
 
 ## 📊 Résultats obtenus
