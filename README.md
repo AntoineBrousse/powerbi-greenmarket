@@ -1,85 +1,82 @@
-# 📄 Power BI Project: *Sales Dashboard – GreenMarket*
+# Étude de cas – Automatisation de l’actualisation d’un rapport Power BI à partir de fichiers Excel OneDrive
 
-lien vers le dashboard : https://app.powerbi.com/reportEmbed?reportId=9e15115f-84b8-443c-8ce5-3b31164e654b&autoAuth=true&ctid=a9f1c4f7-38f4-4d38-8a3c-4b6dbe981cea
+## 📌 Contexte
+Une PME fictive du secteur **Green Market** gère ses ventes mensuelles dans des fichiers Excel stockés sur OneDrive.  
+Chaque mois, un nouveau fichier est ajouté, nécessitant :
+- Une **importation manuelle** dans Power BI.
+- Un **rafraîchissement manuel** du rapport.
+- L’envoi des mises à jour aux équipes commerciales.
 
-## 🧾 Description
-
-Ce projet Power BI vise à créer un **tableau de bord interactif** pour une entreprise fictive, *GreenMarket*, à partir de ventes journalières simulées.  
-Il permet de **suivre les performances commerciales** et d’identifier les **produits et segments les plus performants**.
-
-> 🔁 **Automatisation** : Le rapport est connecté à une table Google BigQuery qui s’alimente automatiquement chaque jour. Cela permet un **rafraîchissement continu** des données et un suivi en temps réel.
-
----
-
-## 🎯 Objectifs
-
-- Suivre les ventes quotidiennes
-- Analyser les KPI clés : chiffre d’affaires, quantité vendue, panier moyen
-- Identifier les produits top et les leviers d’amélioration
-- Offrir une navigation fluide et intuitive à travers les données
+Ce processus était **chronophage**, répétitif et sujet à des oublis.
 
 ---
 
-## 📁 Contenu du projet
-
-| Fichier                            | Description                                   |
-|-----------------------------------|-----------------------------------------------|
-| `Rapport_GreenMarket.pbix`        | Rapport Power BI interactif                   |
-| `README_GreenMarket.pdf`          | Fiche descriptive du projet                   |
-
----
-
-## 📊 Structure du rapport
-
-### Page 1 – Vue d’ensemble
-- KPI globaux : revenu, quantité, panier moyen, commandes
-- Graphiques : évolution des ventes, répartitions par pays, produit, mode de paiement
-
-### Page 2 – Analyse par produit
-- Filtres dynamiques par catégorie et produit
-- KPI spécifiques au produit sélectionné
-- Graphiques d’évolution & Top produits
+## 🎯 Objectif
+Mettre en place une **solution automatisée** permettant :
+- L’**import automatique** des nouveaux fichiers Excel depuis OneDrive dans Power BI.
+- L’**actualisation du rapport** sans intervention humaine.
+- L’**envoi d’une notification par email** avec un lien vers le rapport à jour.
 
 ---
 
-## 🧮 Mesures DAX utilisées
+## 💡 Solution mise en place
 
-```dax
-Revenue = SUMX('Ventes', 'Ventes'[Quantité] * 'Ventes'[Prix Unitaire])
-Panier moyen = [Revenue] / DISTINCTCOUNT('Ventes'[ID Commande])
-Nombre de commandes = DISTINCTCOUNT('Ventes'[ID Commande])
-```
+### 1. **Connexion Power BI ↔ OneDrive**
+- Lien direct entre Power BI et le dossier OneDrive contenant les fichiers Excel.
+- Dans **Power Query** :
+  - Sélection et formatage des colonnes nécessaires (dates, produits, montants…).
+  - Normalisation des formats (dates, décimales…).
+  - Transformation des données pour garantir une cohérence d’analyse.
 
----
-
-## 🔍 Insights clés
-
-- Hausse de chiffre d’affaires en fin de période
-- 85 % des ventes proviennent des catégories *Alimentation* et *Maison & Entretien*
-- Produit P002 = plus vendu ; P017 = plus rentable
-- Apple Pay = moyen de paiement dominant
-
----
-
-## 💡 Recommandations
-
-- Valoriser les produits à **fort revenu mais peu vendus**
-- Cibler les pays sous-performants (ex. Belgique, Espagne)
-- Suivre les tendances sur une **période plus longue** pour anticiper la saisonnalité
+### 2. **Automatisation avec Power Automate**
+- **Déclencheur** : détection d’un nouveau fichier dans le dossier OneDrive.
+- **Actions** :
+  1. Actualisation du dataset Power BI sur le Service.
+  2. Envoi d’un email automatique aux équipes avec :
+     - Un **lien direct** vers le rapport Power BI actualisé.
+     - *(Option Premium)* le rapport exporté en PDF ou PowerPoint en pièce jointe.
 
 ---
 
-## ☁️ Architecture de données
-
-- Données stockées dans **Google BigQuery**
-- Mise à jour automatique via un script Python et Airflow
-- Connexion Power BI en direct via le connecteur BigQuery
-- Modèle Power BI mis à jour quotidiennement
+## 📊 Résultats obtenus
+- **Gain de temps** : plus besoin de manipulations manuelles chaque mois.
+- **Réduction des erreurs** : suppression des oublis et des incohérences dans les données.
+- **Accès instantané** : le rapport est disponible en temps réel après l’ajout d’un fichier.
+- **Meilleure communication** : tous les destinataires sont informés automatiquement.
 
 ---
 
-## 📌 Auteur
+## 🛠️ Stack technique
+- **Power BI Service** (connexion directe à OneDrive + Power Query pour la transformation des données)
+- **Power Automate** (déclenchement et envoi des notifications)
+- **OneDrive** (stockage centralisé des fichiers Excel)
+- **Microsoft Outlook** (diffusion par email)
 
-- **Antoine Brousse**  
-- [LinkedIn](https://www.linkedin.com/in/brousseantoine/)  
-- [Portfolio](https://antoinebrousse.github.io/Portofolio/)
+---
+
+## 📬 Exemple d’email envoyé
+
+
+---
+
+## 🚀 Améliorations possibles
+- Ajout d’un **résumé automatique des indicateurs clés** dans l’email.
+- Archivage automatique des anciens rapports sur SharePoint.
+- Mise en place d’un tableau de bord consolidé multi-années.
+
+---
+
+## 👤 Auteur
+**Antoine Brousse**  
+Data Analyst | Étudiant en Master Économétrie & Data Science
+
+---
+
+## 📌 Note
+Ce projet est basé sur un scénario fictif mais reproduit fidèlement un **cas d’usage réel en entreprise**.
+Il démontre ma capacité à :
+- **Connecter Power BI à des sources cloud** (OneDrive)
+- **Transformer et préparer les données** avec Power Query
+- **Automatiser un processus de reporting complet** avec Power Automate
+- **Améliorer la productivité et la qualité des données**
+
