@@ -46,7 +46,7 @@ En résumé, dès qu’un fichier de ventes est ajouté dans OneDrive, le rappor
      - Un **lien direct** vers le rapport Power BI actualisé.
 Flux sur power automate :
 
-![flux](/images/flux-automate.png.png)
+![flux](/images/flux-automate.png)
 
 ---
 
