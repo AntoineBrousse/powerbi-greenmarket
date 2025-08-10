@@ -53,7 +53,7 @@ Flux sur power automate :
 
 ## 🧪 Phase de test du workflow
 
-Afin de valider le bon fonctionnement du processus automatisé, une série de tests a été réalisée sur l’ensemble du flux OneDrive → Power BI → Power Automate → Notification email.
+Afin de valider le bon fonctionnement du processus automatisé, une série de tests a été réalisée sur l’ensemble du flux.
 
 1. Préparation des fichiers de test
 - Création de plusieurs fichiers Excel simulant des ventes mensuelles (janvier à juillet).
