@@ -78,12 +78,13 @@ email reçu après le déclanchement du flow power automate :
 
 
 5. Test en conditions réelles
-Aperçu du flux sur power automate après l'ajout d’un nouveau fichier avec des ventes fictives d’août.
+- Aperçu du flux sur power automate après l'ajout d’un nouveau fichier avec des ventes fictives d’août.
 ![flux](images/text-flux.png)
 
 
 
 Résultat : le workflow a permis d’intégrer un nouveau fichier de ventes et d’actualiser le rapport sans aucune intervention manuelle, confirmant l’efficacité et la fiabilité du processus
+
 ---
 
 ## 📊 Résultats obtenus
