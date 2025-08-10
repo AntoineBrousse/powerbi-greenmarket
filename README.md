@@ -51,6 +51,41 @@ Flux sur power automate :
 
 ---
 
+## 🧪 Phase de test du workflow
+
+Afin de valider le bon fonctionnement du processus automatisé, une série de tests a été réalisée sur l’ensemble du flux OneDrive → Power BI → Power Automate → Notification email.
+
+1. Préparation des fichiers de test
+- Création de plusieurs fichiers Excel simulant des ventes mensuelles (janvier à juillet).
+- Vérification que leur structure correspond au modèle attendu par Power Query (mêmes colonnes, formats cohérents).
+- Ajout d’un fichier de test volontairement incomplet pour analyser la gestion des erreurs.
+
+2. Simulation d’ajout dans OneDrive
+- Ajout manuel d’un fichier Excel dans le dossier surveillé par Power Automate.
+- Observation du déclenchement automatique du flux.
+
+3. Contrôle des étapes du flux
+- Vérification que Power BI détecte le nouveau fichier.
+- Validation que Power Query applique correctement les transformations prévues (nettoyage, sélection des colonnes, formats).
+- Confirmation que le dataset Power BI est rafraîchi sur le Service.
+
+4. Vérification de la notification email
+- Réception d’un email automatique à l’adresse configurée.
+- Contrôle du contenu : présence du lien vers le rapport Power BI actualisé.
+
+email reçu après le déclanchement du flow power automate : 
+![mail](images/mail.png)
+
+
+5. Test en conditions réelles
+Aperçu du flux sur power automate après l'ajout d’un nouveau fichier avec des ventes fictives d’août.
+![flux](images/text-flux.png)
+
+
+
+Résultat : le workflow a permis d’intégrer un nouveau fichier de ventes et d’actualiser le rapport sans aucune intervention manuelle, confirmant l’efficacité et la fiabilité du processus
+---
+
 ## 📊 Résultats obtenus
 - **Gain de temps** : plus besoin de manipulations manuelles chaque mois.
 - **Réduction des erreurs** : suppression des oublis et des incohérences dans les données.
@@ -67,21 +102,10 @@ Flux sur power automate :
 
 ---
 
-## 📬 Exemple d’email envoyé
-
-
----
-
 ## 🚀 Améliorations possibles
 - Ajout d’un **résumé automatique des indicateurs clés** dans l’email.
 - Archivage automatique des anciens rapports sur SharePoint.
 - Mise en place d’un tableau de bord consolidé multi-années.
-
----
-
-## 👤 Auteur
-**Antoine Brousse**  
-Data Analyst | Étudiant en Master Économétrie & Data Science
 
 ---
 
@@ -92,4 +116,5 @@ Il démontre ma capacité à :
 - **Transformer et préparer les données** avec Power Query
 - **Automatiser un processus de reporting complet** avec Power Automate
 - **Améliorer la productivité et la qualité des données**
-
+  
+Antoine Brousse
