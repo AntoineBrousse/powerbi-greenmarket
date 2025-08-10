@@ -109,7 +109,6 @@ Résultat : le workflow a permis d’intégrer un nouveau fichier de ventes et d
 - Mise en place d’un tableau de bord consolidé multi-années.
 
 ---
-
 ## 📌 Note
 Ce projet est basé sur un scénario fictif mais reproduit fidèlement un **cas d’usage réel en entreprise**.
 Il démontre ma capacité à :
@@ -117,5 +116,9 @@ Il démontre ma capacité à :
 - **Transformer et préparer les données** avec Power Query
 - **Automatiser un processus de reporting complet** avec Power Automate
 - **Améliorer la productivité et la qualité des données**
-  
+
+Capture d'ecran du rapport sur power bi service : 
+![Page-1](images/Page-1.png)
+![Page-2](images/Page-2.png)
+
 Antoine Brousse
