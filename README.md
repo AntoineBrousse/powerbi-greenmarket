@@ -19,11 +19,10 @@ Ce processus était **chronophage**, répétitif et sujet à des oublis.
 
 ## 🎯 Objectif
 Mettre en place une solution qui permette à Green Market de disposer en permanence d’un rapport Power BI à jour et prêt à l’analyse en automatisant :
-- L’importation des nouveaux fichiers Excel stockés sur OneDrive.
 - Le nettoyage et la transformation des données (sélection des colonnes pertinentes, mise au bon format, suppression des champs inutiles) directement dans Power Query.
-- L’intégration automatique des nouvelles données dans le modèle Power BI.
+- L’intégration des nouvelles données dans le modèle Power BI.
 - Le rafraîchissement du rapport sur Power BI Service.
-- L’envoi automatique d’une notification par email avec le lien vers le rapport actualisé.
+- L’envoi d’une notification par email avec le lien vers le rapport actualisé.
 
 En résumé, dès qu’un fichier de ventes est ajouté dans OneDrive, le rapport Power BI est immédiatement prêt à être consulté, sans aucune manipulation manuelle.
 
