@@ -18,7 +18,7 @@ Ce processus était **chronophage**, répétitif et sujet à des oublis.
 ---
 
 ## 🎯 Objectif
-Mettre en place une solution qui permette à Green Market de disposer en permanence d’un rapport Power BI à jour et prêt à l’analyse, sans aucune intervention humaine, en automatisant :
+Mettre en place une solution qui permette à Green Market de disposer en permanence d’un rapport Power BI à jour et prêt à l’analyse en automatisant :
 - L’importation des nouveaux fichiers Excel stockés sur OneDrive.
 - Le nettoyage et la transformation des données (sélection des colonnes pertinentes, mise au bon format, suppression des champs inutiles) directement dans Power Query.
 - L’intégration automatique des nouvelles données dans le modèle Power BI.
